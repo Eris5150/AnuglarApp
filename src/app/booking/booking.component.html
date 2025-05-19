@@ -1,0 +1,76 @@
+<div id="booking" id="booking" [ngStyle]="{ 'background-color': bookingForm.invalid ? '#fbe9e7' : '#f7f7f7' }">
+  <h2>Book Tickets for {{ movieTitle }}</h2>
+
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Select Theater</mat-label>
+      <mat-select formControlName="theater" required>
+        <mat-option *ngFor="let theater of theaterList" [value]="theater">
+          {{ theater }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="bookingForm.get('theater')?.invalid">
+        Theater selection is required.
+      </mat-error>
+    </mat-form-field>
+
+    <div>
+      <h3>Select Showtime</h3>
+      <mat-radio-group formControlName="showtime" required>
+        <mat-radio-button *ngFor="let time of showtimeList" [value]="time">
+          {{time}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <mat-error *ngIf="bookingForm.get('showtime')?.invalid">
+        Showtime selection is required
+      </mat-error>
+    </div>
+
+    <div>
+      <h3>Ticket Quantity</h3>
+      <mat-form-field appearance="fill">
+        <mat-label>Adult Tickets</mat-label>
+        <input matInput type="number" formControlName="adultTickets" min="1" />
+        <mat-error *ngIf="bookingForm.get('adultTickets')?.invalid">
+          At  least one adult ticket is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Child Tickets</mat-label>
+        <input matInput type="number" formControlName="childTickets" min="0" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <h3>User Information</h3>
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" />
+        <mat-error *ngIf="bookingForm.get('firstName')?.invalid">
+          First Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" />
+        <mat-error *ngIf="bookingForm.get('lastName')?.invalid">
+          Last name is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" />
+        <mat-error *ngIf="bookingForm.get('email')?.invalid">
+          Enter a valid email address
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="bookingForm.invalid">
+      Submit Booking
+    </button>
+  </form>
+</div>

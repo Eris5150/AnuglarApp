@@ -1,0 +1,45 @@
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 1rem 0;
+}
+
+.bookings-container {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  padding: 1rem;
+}
+
+.mat-list {
+  padding: 0;
+}
+
+.booking-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.booking-item:last-child {
+  border-bottom: none;
+}
+
+.booking-detail p {
+  margin: 0;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.no-bookings-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  margin-top: 2rem;
+}

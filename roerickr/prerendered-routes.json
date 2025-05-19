@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/",
+    "/booking",
+    "/confirmation",
+    "/contact",
+    "/home",
+    "/my-booking"
+  ]
+}

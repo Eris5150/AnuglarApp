@@ -1,0 +1,41 @@
+<div class="welcome">
+    <h1>Welcome to the Online Movie Ticket Booking System</h1>
+</div>
+<div class="movies-section">
+  <h2>Action movies</h2>
+  <div class="movie-gallery">
+    <mat-card
+      *ngFor="let movie of actionMovies.movies"
+      [ngStyle]="{ 'background-color': 'grey', 'color': '#ffffff', 'padding': '16px', 'border-radius': '8px' }"
+      (click)="navigateToBooking(movie.title)"
+    >
+      <mat-card-header>
+        <mat-card-title>{{ movie.title }}</mat-card-title>
+        <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="movie.posterUrl" />
+      <mat-card-content>
+        <p>{{ movie.description }}</p>
+        <p>Duration: {{ movie.duration }}</p>
+        <p>Rating: {{ movie.rating }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <h2>Thriller movies</h2>
+  <div class="movie-gallery">
+    <mat-card *ngFor="let movie of thrillerMovies.movies" [ngStyle]="{ 'background-color': 'grey', 'color': '#ffffff', 'padding': '16px', 'border-radius': '8px' }"
+    (click)="navigateToBooking(movie.title)">
+      <mat-card-header>
+        <mat-card-title>{{movie.title}}</mat-card-title>
+        <mat-card-subtitle>{{movie.genre}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="movie.posterUrl"/>
+      <mat-card-content>
+        <p>{{movie.description}}</p>
+        <p>Duration: {{movie.duration}}</p>
+        <p>Rating: {{movie.rating}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

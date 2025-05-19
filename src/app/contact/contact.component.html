@@ -1,0 +1,42 @@
+<div class="contact-us-page">
+  <h2>Contact Us</h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input matInput formControlName="firstName" required />
+      <mat-error *ngIf="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched">
+        First Name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lastName" required />
+      <mat-error *ngIf="contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched">
+        Last Name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required />
+      <mat-error *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+        Please enter a valid email address.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Message</mat-label>
+      <textarea matInput formControlName="message" required></textarea>
+      <mat-error *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+        Message is required.
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">Submit</button>
+  </form>
+
+  <p *ngIf="messageSent" class="success-message">Your message has been sent.</p>
+</div>

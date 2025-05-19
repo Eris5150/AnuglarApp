@@ -1,0 +1,58 @@
+{
+  "action": {
+    "movies": [
+      {
+        "posterUrl": "https://m.media-amazon.com/images/I/81cwbLBVDbL._AC_UF1000,1000_QL80_.jpg",
+        "title": "Fast And Furious",
+        "description": "The last installment of the iconic high-speed action franchise.",
+        "genre": "Action",
+        "duration": "2h 10m",
+        "rating": "8.5"
+      },
+      {
+        "posterUrl": "https://i.ebayimg.com/images/g/SRgAAOSwXY9kNpU~/s-l1200.jpg",
+        "title": "John Wick",
+        "description": "The last chapter of the intense action series.",
+        "genre": "Action",
+        "duration": "2h 15m",
+        "rating": "9.0"
+      },
+      {
+        "posterUrl": "https://i.ebayimg.com/00/s/MTYwMFgxMTE5/z/ReEAAOSwbPRkAjQY/$_57.JPG?set_id=8800005007",
+        "title": "Creed 3",
+        "description": "The thrilling conclusion of the Creed trilogy.",
+        "genre": "Action",
+        "duration": "2h",
+        "rating": "7.8"
+      }
+    ]
+  },
+  "thriller": {
+    "movies": [
+      {
+        "posterUrl": "https://m.media-amazon.com/images/I/51MsI8xR-NL._AC_UF894,1000_QL80_.jpg",
+        "title": "Shutter Island",
+        "description": "A psychological thriller set in an eerie mental institution.",
+        "genre": "Thriller",
+        "duration": "2h 18m",
+        "rating": "8.2"
+      },
+      {
+        "posterUrl": "https://m.media-amazon.com/images/I/711WuW+BdnL._AC_UF894,1000_QL80_.jpg",
+        "title": "Menu",
+        "description": "A dark thriller exploring sinister events at a fine-dining restaurant.",
+        "genre": "Thriller",
+        "duration": "2h",
+        "rating": "7.5"
+      },
+      {
+        "posterUrl": "https://m.media-amazon.com/images/I/A1VPnDzBH3L._AC_UF894,1000_QL80_.jpg",
+        "title": "A Quiet Place",
+        "description": "A gripping thriller about survival in silence.",
+        "genre": "Thriller",
+        "duration": "1h 40m",
+        "rating": "8.1"
+      }
+    ]
+  }
+}

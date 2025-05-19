@@ -1,0 +1,20 @@
+<div class="my-booking-page">
+  <h2>My Bookings</h2>
+
+  <div *ngIf="bookings.length > 0; else noBookings">
+    <mat-list>
+      <mat-list-item *ngFor="let booking of bookings">
+        <span matListItemTitle>Booking Number: {{ bookings.indexOf(booking) + 1 }}</span>
+        <span matListItemLine><strong>Movie Name:</strong> {{ booking.movie }}</span>
+        <span matListItemLine><strong>Showtime:</strong> {{ booking.showtime }}</span>
+        <span matListItemLine><strong>Tickets:</strong> {{ booking.tickets }}</span>
+        <span matListItemLine><strong>Total Cost:</strong> ${{ booking.totalCost }}</span>
+        <hr>
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+  <ng-template #noBookings>
+    <p>You have no bookings.</p>
+  </ng-template>
+</div>
